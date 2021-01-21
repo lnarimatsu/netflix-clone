@@ -1,0 +1,44 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.row__posters {
+  /* horizontal default displat via flex  */
+  display: flex;
+  /* creates a scrollable row  */
+  overflow-y: hidden;
+  overflow-x: scroll;
+  /* To allow some space for the scale grow effect */
+  padding: 20px;
+}
+
+/* hide the overflow scroll */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  /* keep the aspect ratio of image */
+  object-fit: contain;
+  /* keep row on all page horizonatlly*** */
+  width: 100%;
+  /* Limits to a size */
+  max-height: 100px;
+  /* some space between images */
+  margin-right: 10px;
+  /* smoothly the scale grrow effect */
+  transition: transform 450ms;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
